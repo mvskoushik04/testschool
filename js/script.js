@@ -102,6 +102,12 @@ document.addEventListener('DOMContentLoaded', () => {
           top: targetElement.offsetTop - 80,
           behavior: 'smooth'
         });
+        
+        // Close mobile menu if open
+        if (window.innerWidth <= 768 && nav.classList.contains('active')) {
+          nav.classList.remove('active');
+          toggle.textContent = "☰";
+        }
       }
     });
   });

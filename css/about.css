@@ -1,0 +1,262 @@
+/* About Page Specific Styles */
+.about-main {
+  padding-top: 80px;
+  min-height: calc(100vh - 400px);
+  margin-bottom: 50px; /* Added for footer visibility */
+}
+
+.our-journey {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.journey-left {
+  flex: 1.5;
+  min-width: 300px;
+}
+
+.journey-left h2 {
+  font-size: 2.2rem;
+  color: #2c318e;
+  margin-bottom: 20px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.journey-left h2::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: #f3a94d;
+  bottom: 0;
+  left: 0;
+}
+
+.journey-left p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.journey-left strong {
+  color: #2c318e;
+  font-weight: 600;
+}
+
+.journey-right {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.info-block h4 {
+  font-size: 1.2rem;
+  color: #2c318e;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.info-block p {
+  font-size: 2rem;
+  color: #f3a94d;
+  font-weight: 700;
+  margin: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+/* Extra Curriculum Activities Section */
+.extra-curriculum {
+  padding: 80px 20px;
+  background-color: white;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #2c318e;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background: #f3a94d;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.activity-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.activity-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(44, 49, 142, 0.1);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.activity-title {
+  font-size: 1.5rem;
+  color: #2c318e;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.activity-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  color: #f3a94d;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.read-more i {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.read-more:hover {
+  color: #2c318e;
+}
+
+.read-more:hover i {
+  transform: translateX(5px);
+}
+
+.view-all-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.view-all-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #2c318e;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #f3a94d;
+  transform: translateY(-3px);
+}
+
+/* Ensure footer is visible */
+body {
+  padding-bottom: 20px; /* Added for footer visibility */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .journey-right {
+    margin-top: 30px;
+  }
+  
+  .journey-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer visibility fix for about page */
+  .about-main {
+    margin-bottom: 30px;
+  }
+  
+  body {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .journey-left h2 {
+    font-size: 1.6rem;
+  }
+  
+  .info-block h4 {
+    font-size: 1.1rem;
+  }
+  
+  .info-block p {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .activity-card {
+    padding: 20px;
+  }
+
+  .activity-title {
+    font-size: 1.3rem;
+  }
+}
