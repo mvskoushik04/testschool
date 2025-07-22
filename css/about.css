@@ -1,13 +1,14 @@
 /* About Page Specific Styles */
 .about-main {
-  padding-top: 80px;
-  min-height: calc(100vh - 400px);
-  margin-bottom: 50px; /* Added for footer visibility */
+  padding-top: 40px;
+  flex: 1 0 auto;
+  margin-bottom: 0;
 }
 
 .our-journey {
-  padding: 80px 20px;
+  padding: 60px 43px;
   background-color: #f9f9f9;
+  padding-bottom: 20px;
 }
 
 .container {
@@ -15,7 +16,7 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 40px;
+  gap: 10px;
 }
 
 .journey-left {
@@ -89,14 +90,20 @@ hr {
   background-color: white;
 }
 
+.section-header {
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+}
+
 .section-title {
   font-size: 2.2rem;
   color: #2c318e;
-  text-align: center;
-  margin-bottom: 50px;
+  text-align: left;
+  margin-bottom: 30px;
   font-weight: 700;
   position: relative;
   text-transform: uppercase;
+  display: inline-block;
 }
 
 .section-title::after {
@@ -106,8 +113,13 @@ hr {
   height: 3px;
   background: #f3a94d;
   bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  transform: none;
+}
+
+.view-all-container {
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 .activities-grid {
@@ -115,7 +127,7 @@ hr {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 40px auto 0 auto;
 }
 
 .activity-card {
@@ -177,9 +189,9 @@ hr {
   transform: translateX(5px);
 }
 
-.view-all-container {
-  text-align: center;
-  margin-top: 50px;
+.view-all-container-mobile {
+  display: none;
+  margin-top: 15px;
 }
 
 .view-all-btn {
@@ -198,15 +210,30 @@ hr {
   transform: translateY(-3px);
 }
 
-/* Ensure footer is visible */
+/* Body styles */
 body {
-  padding-bottom: 20px; /* Added for footer visibility */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Body Styles */
+body {
+  min-height: 100vh;
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
+  }
+
+  .view-all-container {
+    display: none;
+  }
+
+  .view-all-container-mobile {
+    display: block;
   }
   
   .journey-right {
@@ -227,11 +254,7 @@ body {
 
   /* Footer visibility fix for about page */
   .about-main {
-    margin-bottom: 30px;
-  }
-  
-  body {
-    padding-bottom: 30px;
+    margin-bottom: 0;
   }
 }
 

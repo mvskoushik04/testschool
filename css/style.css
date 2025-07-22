@@ -7,6 +7,26 @@
   scrollbar-color: rgba(0,0,0,0.3) transparent;
 }
 
+.hero-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  background-color: #f4c542;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.hero-btn:hover {
+  background-color: #e6b73f;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
 body, html {
   font-family: 'Poppins', sans-serif;
   width: 100%;
@@ -205,7 +225,7 @@ header.scrolled {
 
 /* ------------------- MANTHAN SECTION ------------------- */
 .manthan-section {
-  padding: 80px 20px;
+  padding: 50px 20px;
   background-color: #ffffff;
   text-align: center;
   opacity: 0;
@@ -313,7 +333,7 @@ header.scrolled {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f9f9f9;
-  padding: 80px 20px;
+  padding: 40px 40px;
   z-index: 1;
   overflow: hidden;
   opacity: 0;
@@ -432,7 +452,7 @@ header.scrolled {
 .school-footer {
   background-color: #0a2a45;
   color: #fff;
-  padding: 50px 20px 20px;
+  padding: 50px 40px 40px;
   position: relative;
 }
 
@@ -454,6 +474,14 @@ header.scrolled {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.footer-school-name {
+  color: #f4c542;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .footer-links {
@@ -520,7 +548,7 @@ header.scrolled {
 
 .footer-links ul li a:hover {
   color: #f4c542;
-  padding-left: 5px;
+  padding-left: 40px;
 }
 
 .footer-contact p {
@@ -537,17 +565,17 @@ header.scrolled {
 
 .footer-bottom {
   text-align: center;
-  margin-top: 50px;
-  padding-top: 20px;
+  margin-top: 30px;
+  padding: 15px 40px;
   border-top: 1px solid rgba(255,255,255,0.1);
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-bottom p {
   color: rgba(255,255,255,0.7);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .footer-bottom i {
@@ -646,7 +674,7 @@ header.scrolled {
   }
 
   .manthan-section {
-    padding: 40px 20px; /* Reduced from 80px to 40px for mobile only */
+    padding: 30px 20px; /* Reduced padding for mobile */
   }
 
   .menu-toggle {
@@ -721,6 +749,12 @@ header.scrolled {
     font-size: 1rem;
   }
 
+  .hero-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+
   /* Manthan Cards */
   .manthan-cards {
     flex-direction: column;
@@ -762,6 +796,17 @@ header.scrolled {
   
   .footer-map {
     min-height: 250px;
+  }
+
+  .footer-school-name {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px 20px;
   }
 
   /* Floating Elements */
@@ -927,5 +972,9 @@ header.scrolled {
 
   .vasavi-right h2 span {
     font-size: 1.2rem;
+  }
+  .hero-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
   }
 }
