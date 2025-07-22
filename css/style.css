@@ -681,213 +681,127 @@ header.scrolled {
   to { opacity: 0.8; }
 }
 
-/* ------------------- MOBILE RESPONSIVE STYLES ------------------- */
 @media screen and (max-width: 768px) {
-  /* Header and Navigation */
-  header {
-    flex-wrap: wrap;
-    padding: 10px 15px;
-  }
+    /* Remove blue outline on all clickable elements */
+    *, *:focus, *:active, *:visited {
+        outline: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+        -webkit-focus-ring-color: transparent !important;
+        -moz-outline: none !important;
+    }
 
-  .logo-container {
-    flex: 1;
-  }
+    /* Specific fixes for buttons and links */
+    button, button:focus, button:active,
+    a, a:focus, a:active,
+    .logo, .logo:focus, .logo:active,
+    .menu-toggle, .menu-toggle:focus, .menu-toggle:active {
+        outline: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
 
-  .manthan-section {
-    padding: 30px 20px; /* Reduced padding for mobile */
-  }
+    /* Header and Navigation */
+    header {
+        flex-wrap: nowrap;
+        padding: 10px 15px;
+        background: rgba(0, 0, 0, 0.9) !important;
+    }
 
-  .menu-toggle {
-    display: block;
-    margin-left: auto;
-    order: 2;
-    position: relative;
-    top: 0;
-    right: 0;
-    background: transparent;
-    color: white;
-    font-size: 1.8rem;
-    padding: 5px 10px;
-  }
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        background: transparent;
+        color: white;
+        font-size: 1.8rem;
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        z-index: 1002;
+    }
 
-  .navbar {
-    width: 100%;
-    order: 3;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.95);
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    padding: 15px 25px;
-    z-index: 1001;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3); 
-  }
+    .navbar {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 20px;
+        z-index: 1001;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        visibility: hidden;
+        opacity: 0;
+    }
 
-  .navbar.active {
-    display: block;
-  }
+    .navbar.active {
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+    }
 
-  .navbar ul {
-    flex-direction: column;
-    gap: 15px;
-    padding: 0;
-  }
+    .navbar ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+    }
 
-  .navbar ul li {
-    margin: 0;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
+    .navbar ul li {
+        margin: 0;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
 
-  .navbar ul li:last-child {
-    border-bottom: none;
-  }
+    .navbar ul li:last-child {
+        border-bottom: none;
+    }
 
-  .navbar ul li a {
-    display: block;
-    padding: 8px 0;
-    font-size: 1.1rem;
-  }
+    .navbar ul li a {
+        display: block;
+        padding: 10px 0;
+        font-size: 1.1rem;
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
 
-  /* Hero Section */
-  .hero {
-    margin-top: 0;
-    height: 80vh;
-    margin-bottom: 0;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-  
-  .hero-content h2 {
-    font-size: 1.2rem;
-  }
-  
-  .hero-content p {
-    font-size: 1rem;
-  }
+    .navbar ul li a:hover {
+        color: #f4c542;
+    }
 
-  .hero-btn {
-    padding: 10px 25px;
-    font-size: 0.9rem;
-    margin-top: 20px;
-  }
+    /* Logo container responsive styling */
+    .logo-container {
+        outline: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+    }
 
-  /* Manthan Cards */
-  .manthan-cards {
-    flex-direction: column;
-    align-items: center;
-  }
+    .logo {
+        max-height: 50px;
+        width: auto;
+    }
 
-  .manthan-card {
-    max-width: 90%;
-  }
+    /* Additional responsive elements if needed */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
 
-  /* Vasavi Section */
-  .vasavi-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .hero-content p {
+        font-size: 1rem;
+    }
 
-  .vasavi-right {
-    text-align: left;
-  }
+    .section {
+        padding: 40px 20px;
+    }
 
-  .vasavi-right h2 {
-    font-size: 1.8rem;
-  }
-
-  .vasavi-right h2 span {
-    font-size: 1.4rem;
-  }
-
-  .vasavi-right ul li {
-    padding-left: 24px;
-    font-size: 0.95rem;
-  }
-
-  /* Footer */
-  .footer-container {
-    flex-direction: column;
-  }
-  
-  .footer-map {
-    min-height: 250px;
-  }
-
-  .footer-school-name {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 5px;
-    padding: 12px 20px;
-  }
-
-  /* Floating Elements */
-  .floating-icons {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    flex-direction: column;
-    border-radius: 0 8px 8px 0;
-    padding: 8px 4px;
-    gap: 12px;
-    background-color: #0a2a45;
-  }
-  
-  .floating-icons a {
-    font-size: 18px;
-    width: 32px;
-    height: 32px;
-  }
-
-  .contact-us {
-    position: fixed !important;
-    bottom: 20px !important;
-    left: 50% !important;
-    right: auto !important;
-    top: auto !important;
-    transform: translateX(-50%) !important;
-    padding: 10px 15px;              /* Increased from 8px 12px */
-    border-radius: 22px;             /* Increased from 20px */
-    background-color: #f4c542;
-    color: #000;
-    z-index: 999;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    display: flex;
-    flex-direction: row !important;
-    align-items: center;
-    gap: 6px;                        /* Increased from 5px */
-    font-size: 0.9rem;               /* Increased from 0.8rem */
-    font-weight: 500;
-    white-space: nowrap;
-    width: auto;
-    max-width: 140px;                /* Increased from 120px */
-    height: 40px;                    /* Increased from 35px */
-  }
-
-  .contact-text {
-    writing-mode: horizontal-tb;
-    font-weight: 700;
-  }
-
-  .contact-icon {
-    font-size: 1rem;                 /* Increased from 0.9rem */
-    display: inline-block;
-  }
-  .contact-us:hover {
-    background-color: #e6b73f;
-    transform: translateX(-50%) scale(1.02);
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-  }
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
 }
+
 
 /* Footer Styles */
 .school-footer {
