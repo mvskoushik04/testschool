@@ -7,6 +7,26 @@
   scrollbar-color: rgba(0,0,0,0.3) transparent;
 }
 
+/* Remove blue outline on all clickable elements */
+*, *:focus, *:active, *:visited {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+    -moz-outline: none !important;
+}
+
+/* Specific fixes for buttons and links */
+button, button:focus, button:active,
+a, a:focus, a:active,
+.logo, .logo:focus, .logo:active,
+.menu-toggle, .menu-toggle:focus, .menu-toggle:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+
 .hero-btn {
   display: inline-block;
   margin-top: 25px;
